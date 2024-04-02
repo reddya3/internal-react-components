@@ -75,7 +75,36 @@ Here is how you can use the provided React components:
     ```javascript
     import { Body, Cell, Grid, Head, Header, HeaderCell, HeaderRow, Row, Table, WrapperRow } from '@ppe/ppe-react-modules';
 
-    // Example usage of Table components here
+    <Table label="tasklist" className="c-person__table">
+        <Header>
+          <Head>
+            <HeaderRow>
+              <HeaderCell className="c-person__name">FullName</HeaderCell>
+              <HeaderCell className="c-person__bio">Bio</HeaderCell>
+              <HeaderCell className="c-person__job-title">Job Title</HeaderCell>
+              <HeaderCell className="c-person__email-id">Email Id</HeaderCell>
+              <HeaderCell className="c-person__zodiac-sign">Zodiac Sign</HeaderCell>
+            </HeaderRow>
+          </Head>
+        </Header>
+        <Grid>
+          <Body>
+            {persons.map(person => {
+              return (
+                <WrapperRow key={person.name}>
+                  <Row key={person.name}>
+                    <Cell className="c-person__name">{person.name}</Cell>
+                    <Cell className="c-person__bio">{person.bio}</Cell>
+                    <Cell className="c-person__job-title">{person.jobTitle}</Cell>
+                    <Cell className="c-person__email-id">{person.emailId}</Cell>
+                    <Cell className="c-person__zodiac-sign">{person.zodiacSign}</Cell>
+                  </Row>
+                </WrapperRow>
+              )
+            })}
+          </Body>
+        </Grid>
+      </Table>
     ```
 
 ## Flow Diagram: From Artifactory to React Application
