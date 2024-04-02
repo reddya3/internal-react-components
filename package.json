@@ -1,6 +1,6 @@
 {
   "name": "@ppe/ppe-react-modules",
-  "version": "0.1.8",
+  "version": "0.1.0",
   "description": "A React module of a button following Leyden styles",
   "license": "SEE LICENSE IN LICENSE",
   "main": "dist/index.js",
@@ -15,8 +15,8 @@
     "node": "^18.15.0"
   },
   "scripts": {
-    "build": "npm run clean && npm run scss && npm run tsc && npm pack && echo 'please manually push the tgz to gemfury ;)'",
-    "scss": "sass --style=compressed src/scss/main.scss dist/els-styleguide-core.css",
+    "build": "npm run clean && npm run scss && npm run tsc && npm pack",
+    "scss": "sass --style=compressed src/scss/main.scss dist/ppe-styleguide-core.css",
     "clean": "rimraf dist",
     "lint": "eslint --ext .js,.ts .",
     "test": "jest",
