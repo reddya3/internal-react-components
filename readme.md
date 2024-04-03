@@ -56,7 +56,7 @@ Here is how you can use the provided React components:
 - **React Button**:
 
     ```javascript
-    import { Button } from '@els/els-react--button';
+    import { Button } from '@ppe/ppe-react-modules';
 
     <Button
       onClick={function (e) {
